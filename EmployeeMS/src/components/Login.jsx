@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './style.css';
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Login = () => {
@@ -8,11 +9,17 @@ const Login = () => {
         email: '',
         password: ''
     });
-
+    const[error , setError] = useState();
+    const navigate = useNavigate() ;
     const handleSubmit =(event)=>{
         event.preventDefault();
         axios.post('http://localhost:3000/auth/adminlogin',values).then((result)=>{
-            console.log(result);
+            if(result.data.LoginStatus){
+                navigate('/dashboard') ;
+            }
+            else{
+                setError(result.data.Error) ;
+            }
         }).catch((err)=>{
             console.log(err);
         })
@@ -28,6 +35,9 @@ const Login = () => {
                  backgroundBlendMode: 'overlay',
                  backgroundColor: 'rgba(11, 11, 11, 0.5)'
              }}>
+                <div className='text-warning'>
+                {error && error}
+            </div>
                 <div className='col-md-6 col-lg-4 p-3 rounded border loginForm'>
                     <h2 className="text-center mb-4">Login Page</h2>
                     <form onSubmit={handleSubmit}>
