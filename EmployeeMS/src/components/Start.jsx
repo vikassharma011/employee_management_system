@@ -10,7 +10,7 @@ const Start = () => {
   useEffect(() => {
     const verifyUser = async () => {
       try {
-        const result = await axios.get('http://localhost:3000/verify');
+        const result = await axios.get('http://localhost:5000/verify');
         console.log(result.data); // Debugging
         if (result.data.Status) {
           if (result.data.role === "admin") {

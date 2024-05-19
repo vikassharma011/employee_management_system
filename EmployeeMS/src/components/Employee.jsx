@@ -11,7 +11,7 @@ const Employee = () => {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/auth/employee");
+        const response = await axios.get("http://localhost:5000/auth/employee");
         setEmployees(response.data.Result);
       } catch (error) {
         setError(error.message || "An error occurred");
@@ -25,7 +25,7 @@ const Employee = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/auth/delete_employee/${id}`);
+      await axios.delete(`http://localhost:5000/auth/delete_employee/${id}`);
       setEmployees(employees.filter((employee) => employee.id !== id));
     } catch (error) {
       setError(error.message || "An error occurred");

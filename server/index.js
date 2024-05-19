@@ -8,7 +8,7 @@ import Jwt from "jsonwebtoken";
 
 const app = express();
 app.use(cors({
-    origin: ["http://localhost:5173"],
+    origin: ["http://localhost:3000"],
     methods: ['GET', 'POST', 'PUT', "DELETE"],
     credentials: true
 }))
@@ -35,6 +35,6 @@ app.get('/verify',verifyUser, (req, res)=> {
     return res.json({Status: true, role: req.role, id: req.id})
 } )
 
-app.listen(3000,()=>{
+app.listen(5000,()=>{
     console.log("server is running") ;
 })
