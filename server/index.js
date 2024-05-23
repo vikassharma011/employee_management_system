@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import { EmployeeRouter } from "./Routes/EmployeeRoute.js";
 import { adminRouter } from "./Routes/AdminRoutes.js";
 import Jwt from "jsonwebtoken";
+import path from "path"
 
 
 const app = express();
@@ -15,6 +16,7 @@ app.use(cors({
 app.use(cookieParser())
 app.use(express.json());
 // app.use(express.static('Public/Images'))
+app.use(express.static(path.join(__dirname, "build")));
 app.use('/auth',adminRouter);
 app.use('/employee', EmployeeRouter)
 
