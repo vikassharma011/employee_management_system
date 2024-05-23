@@ -12,7 +12,7 @@ import AddCategory from './components/AddCategory'
 import Start from './components/Start'
 import EmployeeLogin from './components/EmployeeLogin'
 import EmployeeDetail from './components/EmployeeDetail'
-import PrivateRoute from './components/PrivateRoute'
+// import PrivateRoute from './components/PrivateRoute'
 
 function App() {
   

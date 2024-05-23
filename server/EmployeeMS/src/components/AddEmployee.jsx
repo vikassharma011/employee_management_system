@@ -13,7 +13,7 @@ const AddEmployee = () => {
     // image: "",
   });
   const [category, setCategory] = useState([]);
-  const [file, setFile] = useState(null);
+  // const [file, setFile] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {

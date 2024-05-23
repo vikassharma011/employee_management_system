@@ -38,7 +38,8 @@ const Start = () => {
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 loginPage">
       <div className="p-3 rounded w-100 w-md-50 w-lg-25 border loginForm">
-        <h2 className="text-center">Login As</h2>
+        <h2 className="text-center">Login As </h2>
+        <h3 className="text-center">default email:admin2@gmail.com,password:12345</h3>
         <div className="d-flex justify-content-around mt-5 mb-2">
           <button type="button" className="btn btn-primary" onClick={handleEmployeeLogin}>
             Employee
