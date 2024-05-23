@@ -13,7 +13,7 @@ const Login = () => {
     const navigate = useNavigate() ;
     const handleSubmit =(event)=>{
         event.preventDefault();
-        axios.post('http://localhost:5000/auth/adminlogin',values).then((result)=>{
+        axios.post('https://employee-management-system-bnlb.onrender.com/auth/adminlogin',values).then((result)=>{
             if(result.data.LoginStatus){
                 navigate('/dashboard') ;
             }

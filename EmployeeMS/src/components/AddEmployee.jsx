@@ -18,7 +18,7 @@ const AddEmployee = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/auth/category")
+      .get("https://employee-management-system-bnlb.onrender.com/auth/category")
       .then((result) => {
         if (result.data.Status) {
           setCategory(result.data.Result);
@@ -74,7 +74,7 @@ const AddEmployee = () => {
     };
 
     axios
-      .post("http://localhost:5000/auth/add_employee", formData)
+      .post("https://employee-management-system-bnlb.onrender.com/auth/add_employee", formData)
       .then((result) => {
         if (result.data.Status) {
           navigate("/dashboard/employee");

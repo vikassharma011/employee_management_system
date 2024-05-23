@@ -10,7 +10,7 @@ const Start = () => {
   useEffect(() => {
     const verifyUser = async () => {
       try {
-        const result = await axios.get('http://localhost:5000/verify');
+        const result = await axios.get('https://employee-management-system-bnlb.onrender.com/verify');
         console.log(result.data); // Debugging
         if (result.data.Status) {
           if (result.data.role === "admin") {

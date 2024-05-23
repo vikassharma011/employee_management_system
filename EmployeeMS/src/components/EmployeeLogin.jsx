@@ -15,7 +15,7 @@ const EmployeeLogin = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post('http://localhost:5000/employee/employee_login', values)
+        axios.post('https://employee-management-system-bnlb.onrender.com/employee/employee_login', values)
             .then(result => {
                 if (result.data.loginStatus) {
                     localStorage.setItem("valid", true);
