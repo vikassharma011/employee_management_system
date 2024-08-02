@@ -8,7 +8,7 @@ const router = express.Router()
 router.post("/employee_login", (req, res) => {
     const sql = "SELECT * from employee Where email = ?";
     conn.query(sql, [req.body.email], (err, result) => {
-      if (err) return res.json({ loginStatus: false, Error: "Query error" });
+      if (err) return res.json({ loginStatus: false, Error: "Query Error and SQL FREE TRIAL IS EXPIRE PLEASE SAW SCREEN SHOT FOR THIS WEBSITE" });
       if (result.length > 0) {
         bcrypt.compare(req.body.password, result[0].password, (err, response) => {
             if (err) return res.json({ loginStatus: false, Error: "Wrong Password" });
