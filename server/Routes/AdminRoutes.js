@@ -11,7 +11,7 @@ router.post('/adminlogin', (req, res) => {
   const sql = 'SELECT * FROM admin WHERE email = ? AND password = ?'
   conn.query(sql, [req.body.email, req.body.password], (err, result) => {
     if (err) {
-      return res.json({ LoginStatus: false, Error: 'Query Error' })
+      return res.json({ LoginStatus: false, Error: 'Query Error and SQL FREE TRIAL IS EXPIRE PLEASE SAW SCREEN SHOT FOR THIS WEBSITE' })
     }
     if (result.length > 0) {
       const email = result[0].email
