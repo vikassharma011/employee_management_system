@@ -1,10 +1,10 @@
 import mysql from "mysql"
 
 const conn = mysql.createConnection({
-    "host": "sql12.freesqldatabase.com",
-    "user":"sql12711114",
-    "password":"FmnSqm6fP1",
-    "database":"sql12711114"
+    "host": "sql12.freemysqlhosting.net",
+    "user":"sql12731626",
+    "password":"YydlqIAds4",
+    "database":"sql12731626"
 })
 
 conn.connect((err)=>{
