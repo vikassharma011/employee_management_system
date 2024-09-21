@@ -1,10 +1,10 @@
 import mysql from "mysql"
 
 const conn = mysql.createConnection({
-    "host": "sql12.freemysqlhosting.net",
-    "user":"sql12731626",
-    "password":"YydlqIAds4",
-    "database":"sql12731626"
+    "host": "bpsm3dxrq1izl7ylqtjj-mysql.services.clever-cloud.com",
+    "user":"ufsttt81uolk7wik",
+    "password":"i7vX4wk5m1u1ZPhEjcj2",
+    "database":"bpsm3dxrq1izl7ylqtjj"
 })
 
 conn.connect((err)=>{
